@@ -8,7 +8,7 @@ class MemoryMemberRepository : MemberRepository {
     companion object {
 
         private val store = hashMapOf<Long, Member>()
-        private var sequence = 0L
+        private var sequence = -1L
     }
 
     override fun save(member: Member): Member {
@@ -27,4 +27,8 @@ class MemoryMemberRepository : MemberRepository {
             }.first().value)
 
     override fun findAll(): List<Member> = store.values.toList()
+
+    fun clearStore() {
+        store.clear()
+    }
 }
