@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service
 import java.lang.IllegalStateException
 import java.util.*
 
-@Service
 class MemberService @Autowired constructor(private val memberRepository: MemoryMemberRepository) {
 
     /**

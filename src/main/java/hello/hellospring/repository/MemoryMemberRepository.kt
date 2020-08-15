@@ -4,7 +4,6 @@ import hello.hellospring.domain.Member
 import org.springframework.stereotype.Repository
 import java.util.*
 
-@Repository
 class MemoryMemberRepository : MemberRepository {
 
     companion object {
