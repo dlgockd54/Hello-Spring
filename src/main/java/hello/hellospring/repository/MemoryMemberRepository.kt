@@ -24,7 +24,7 @@ class MemoryMemberRepository : MemberRepository {
     override fun findByName(name: String): Optional<Member> =
             Optional.ofNullable(store.entries.filter {
                 it.value.name == name
-            }.first().value)
+            }.firstOrNull()?.value)
 
     override fun findAll(): List<Member> = store.values.toList()
 
